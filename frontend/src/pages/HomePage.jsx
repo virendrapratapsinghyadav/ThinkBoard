@@ -62,7 +62,6 @@ const HomePage = () => {
              content={note.content}
              updatedAt={note.updatedAt}
              setNotes = {setNotes}
-             updateNote = {updateNote}
             />
           ))
         }
