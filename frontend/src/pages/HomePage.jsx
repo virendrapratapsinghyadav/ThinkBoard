@@ -43,18 +43,6 @@ const HomePage = () => {
     fetchNotes();
   },[]);
   
-
-  // Update a note
-  const updateNote = async(id, updatedData)=>{
-    try {
-    const res = await api.put(`/notes/${id}`, updatedData);
-    const updateNote = res.data;
-    setNotes((prev)=>prev.map((note)=>note.id === id ? updateNote : note))
-    } catch (error) {
-      console.log('Failed to update the note')
-    }
-  }
-
   return (
     <div className='bg-black text-white w-screen h-screen z-10'>
       <div>
